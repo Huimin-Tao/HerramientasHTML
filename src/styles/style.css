@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #0E21A0;
+    --secondary-color: #BF0CF0;
+    --text-color-dark-background: #FFFFFF;
+    --noto-serif: "Noto Serif", serif;
+    --roboto: "Roboto", sans-serif;
+}
+
+/* Resetting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales de tipografía y colores  */
+/* Mobile First */
+/* Breakpoints Móvil 576px, Tableta 768px, Desktop 992px */
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    font-family: var(--roboto);
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    line-height: 1.5;
+}
+
+
+nav {
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--text-color-dark-background);
+    letter-spacing: 0.1rem;
+    text-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Reglas de .container */
+/* .container {
+    width: 100%;
+    height: 100vh;
+    transition: opacity 0.3s;
+} */
+
+
+/* Menú de Navegación de Home */
+.navbar {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8em;
+}
+
+.navbar ul.navigation {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar ul.navigation li {
+    padding: 0 2em;
+}
+
+.logo i {
+    font-size: 3rem;
+    -webkit-text-stroke: 0.2rem var(--text-color-dark-background);
+    color:transparent;
+    cursor: pointer;
+}
+
+.navigation li a {
+    color: var(--text-color-dark-background);
+}
+
+.navigation li a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* Footer */
+.footer {
+    position:absolute;
+    bottom:60px;
+    margin-left: 8em;
+    font-size: 1.2rem;
+    color:var(--text-color-dark-background);
+}
+
+.footer a{
+    font-weight:700;
+    color:var(--secondary-color);
+}
+
+.footer a:hover{
+    color:var(--primary-color);
+}
+
+
+/* Reglas de la página de index.html */
+.banner {
+    font-family:var(--noto-serif);
+    margin-top: 200px;
+    margin-left: 8em;
+    font-weight: 600;
+    color: var(--text-color-dark-background);
+    text-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    text-align: left;
+
+}
+
+.banner h1 {
+    font-size: 4.5rem;
+}
+
+.banner h2{
+    font-size: 2rem;
+}
+
+.hero-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/home-hero-0.png) no-repeat center center fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
