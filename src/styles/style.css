@@ -39,7 +39,7 @@ body {
 h1 {
     font-family: var(--noto-serif);
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -64,7 +64,7 @@ h3 {
 
 h4 {
     font-size: 1.3rem;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.2rem;
 }
 
 p:not(.suscripcion) {
@@ -74,11 +74,11 @@ p:not(.suscripcion) {
 
 
 .banner-portada h1.titular-portada {
-    font-size: 4.5rem;
+    font-size: 4rem;
 }
 
 .banner-portada h2.titular-portada {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: var(--noto-serif);
 }
 
@@ -316,6 +316,7 @@ header.header {
     text-align: center;
     font-size: 1.2rem;
     color: var(--text-color-dark-background);
+
 }
 
 .footer-portada a {
@@ -334,6 +335,7 @@ header.header {
     gap: 1em;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
+    padding-left:1.5em;
 }
 
 .footer a {
@@ -356,6 +358,8 @@ header.header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-right:10px;
+    padding-left:10px;
     gap: 1em;
 }
 
@@ -376,6 +380,7 @@ input:focus {
 }
 
 
+
 @media (min-width:1200px) {
     .footer {
         flex-direction: row;
@@ -386,7 +391,7 @@ input:focus {
 
     .footer .legal {
         flex-direction: column;
-        align-items:flex-start;
+        align-items: flex-start;
         gap: 1.5rem;
     }
 
@@ -395,7 +400,7 @@ input:focus {
 
 /* Reglas de la página de index.html */
 .banner-portada {
-    margin-top: 55vh;
+    margin-top: 40vh;
     font-weight: 600;
     color: var(--text-color-dark-background);
     text-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
@@ -645,11 +650,9 @@ p.meta-data {
     width: 100%;
 }
 
-
 .card-content h4 a:hover {
     color: var(--secondary-color);
 }
-
 
 
 blockquote {
@@ -669,6 +672,10 @@ ul.lista-canciones li {
     list-style-type: inherit;
 }
 
+/* Configuración para la dependencia de Darkmode */
+.header, a:hover, a.credit{
+    isolation: isolate
+}
 
 
 /* Reglas para presentation.html */
@@ -691,15 +698,10 @@ ul.lista-canciones li {
     padding-left: 2rem;
     text-align: center;
     position: absolute;
-    top: 2rem;
+    top: 10%;
+    -webkit-text-stroke: 0.1rem var(--text-color-dark-background);
 }
 
-@media (max-width:768px) {
-    .banner {
-        top: 50%;
-        -webkit-text-stroke: 0.1rem var(--text-color-dark-background);
-    }
-}
 
 .presentation {
     width: 60%;
@@ -793,3 +795,16 @@ ul.lista-canciones li {
     background-color: var(--secondary-color);
 }
 
+/* Para tener un sticky footer cuando el main no es suficiente para llenar la altura de la ventana del navegador*/
+html, body{
+    height:100%;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+main{
+    flex:1;
+}

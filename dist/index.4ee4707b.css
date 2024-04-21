@@ -31,7 +31,7 @@ html, body {
 h1 {
   font-family: var(--noto-serif);
   margin-bottom: 2rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
 }
 
@@ -54,7 +54,7 @@ h3 {
 }
 
 h4 {
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.2rem;
   font-size: 1.3rem;
 }
 
@@ -64,11 +64,11 @@ p:not(.suscripcion) {
 }
 
 .banner-portada h1.titular-portada {
-  font-size: 4.5rem;
+  font-size: 4rem;
 }
 
 .banner-portada h2.titular-portada {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: var(--noto-serif);
 }
 
@@ -290,6 +290,7 @@ header.header {
   gap: 1em;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
+  padding-left: 1.5em;
   display: flex;
 }
 
@@ -313,6 +314,8 @@ header.header {
   justify-content: center;
   align-items: center;
   gap: 1em;
+  padding-left: 10px;
+  padding-right: 10px;
   display: flex;
 }
 
@@ -351,7 +354,7 @@ input:focus {
   text-shadow: 0 8px 16px #00000080;
   text-align: center;
   -webkit-text-stroke: 1px black;
-  margin-top: 55vh;
+  margin-top: 40vh;
   font-weight: 600;
 }
 
@@ -602,6 +605,10 @@ ul.lista-canciones li {
   list-style-type: inherit;
 }
 
+.header, a:hover, a.credit {
+  isolation: isolate;
+}
+
 .hero {
   background-image: url("hero.5394cc64.png");
   background-size: cover;
@@ -618,17 +625,11 @@ ul.lista-canciones li {
 .banner {
   color: var(--text-color-dark-background);
   text-align: center;
+  -webkit-text-stroke: .1rem var(--text-color-dark-background);
   padding-left: 2rem;
   padding-right: 2rem;
   position: absolute;
-  top: 2rem;
-}
-
-@media (width <= 768px) {
-  .banner {
-    -webkit-text-stroke: .1rem var(--text-color-dark-background);
-    top: 50%;
-  }
+  top: 10%;
 }
 
 .presentation {
@@ -715,5 +716,18 @@ ul.lista-canciones li {
 
 .container.links ul a:hover {
   background-color: var(--secondary-color);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  flex-direction: column;
+  display: flex;
+}
+
+main {
+  flex: 1;
 }
 /*# sourceMappingURL=index.4ee4707b.css.map */

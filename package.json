@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead, not IE <= 11, not OperaMini all",
   "scripts": {
     "parcel:dev": "parcel",
     "parcel:build": "parcel build",
@@ -16,7 +17,8 @@
   "devDependencies": {
     "npm-run-all": "^4.1.5",
     "parcel": "^2.12.0",
-    "rimraf": "^5.0.5"
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.5"
   },
   "dependencies": {
     "darkmode-js": "^1.5.7"
