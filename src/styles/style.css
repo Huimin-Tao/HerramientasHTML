@@ -45,11 +45,11 @@ h1 {
 
 h2,
 h3 {
-    font-weight: 700px;
+    font-weight: 700;
 }
 
 h4 {
-    font-weight: 900px;
+    font-weight: 900;
 }
 
 h2 {
@@ -244,7 +244,7 @@ header.header {
 
 .navigation li a {
     color: var(--primary-color);
-    transition: color 0.3;
+    transition: color 0.3s;
 
 }
 
@@ -293,7 +293,7 @@ header.header {
         text-align: center;
         padding-top: 20px;
         padding-bottom: 20px;
-        transition: all 0.3;
+        transition: all 0.3s;
 
     }
 
@@ -606,7 +606,7 @@ p.meta-data {
 
 }
 
-@media (min-width:1200) {
+@media (min-width:1200px) {
     .wrapper {
         grid-template-columns: 2fr 1fr;
         gap: 100px;
@@ -748,6 +748,11 @@ ul.lista-canciones li {
         margin-left: 0px;
     }
 
+}
+
+/* Asegurar que el iframe no se invierta en modo oscuro */
+body.darkmode--activated iframe {
+    filter: invert(0) !important;
 }
 
 

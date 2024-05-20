@@ -16,4 +16,3 @@ var options = {
 
 // Inicializar Darkmode con las opciones
 new Darkmode(options).showWidget();
-
